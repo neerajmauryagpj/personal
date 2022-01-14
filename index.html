@@ -37,10 +37,10 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
             <div class="social-links">
-                <a href="https://www.facebook.com/mauryaneerajnm" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/invites/contact/?i=1gcmt0hj6yunk&utm_content=5c4l06r" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/neeraj-maurya-73a5691ab" class="linkedin"><i class="bi bi-linkedin"></i></a>
-				<a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a target="_black" href="https://www.facebook.com/mauryaneerajnm" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a target="_black" href="https://www.instagram.com/invites/contact/?i=1gcmt0hj6yunk&utm_content=5c4l06r" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a target="_black" href="https://www.linkedin.com/in/neeraj-maurya-73a5691ab" class="linkedin"><i class="bi bi-linkedin"></i></a>
+				<a target="_black" href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             </div>
         </div>
         <nav class="mobile-nav desktop-nav" id="mobile-nav">
@@ -90,8 +90,7 @@
                         </div>
                     </div>
                     <p>
-                        Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                        Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+                        I am a multidisciplinary designer with a curious mind, I enjoy to meet new people and understand how they are solving problems, this is one of the reasons why I invest my time on meetups from product management to everything related to design (research, design thinking, design system, etc.)
                     </p>
                 </div>
             </div>
@@ -437,27 +436,33 @@
                         <i class="bx bx-share-alt"></i>
                         <h3>Social Profiles</h3>
                         <div class="social-links">
-                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                            <a href="https://www.facebook.com/mauryaneerajnm" class="facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.instagram.com/invites/contact/?i=1gcmt0hj6yunk&utm_content=5c4l06r" class="instagram"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-                            <a href="https://www.linkedin.com/in/neeraj-maurya-73a5691ab" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                            <a target="_black" href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a target="_black" href="https://www.facebook.com/mauryaneerajnm" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a target="_black" href="https://www.instagram.com/invites/contact/?i=1gcmt0hj6yunk&utm_content=5c4l06r" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a target="_black" href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+                            <a target="_black" href="https://www.linkedin.com/in/neeraj-maurya-73a5691ab" class="linkedin"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mt-4 d-flex align-items-stretch">
                     <div class="info-box">
-                        <i class="bx bx-envelope"></i>
+                        <a href="mailto:neerajgpj98@gmail.com">
+                            <i class="bx bx-envelope"></i>
+                        </a>
                         <h3>Email Me</h3>
                         <p>neerajgpj98@gmail.com</p>
                     </div>
                 </div>
                 <div class="col-md-6 mt-4 d-flex align-items-stretch">
+                    <a href="tel:+916392032056" style="width: 100%;">
                     <div class="info-box">
-                        <i class="bx bx-phone-call"></i>
+                        
+                            <i class="bx bx-phone-call"></i>
+                       
                         <h3>Call Me</h3>
                         <p>+91 6392032056</p>
                     </div>
+                </a>
                 </div>
             </div>
             <form action="" id="commentForm" class="contact-from mt-4">
@@ -536,16 +541,16 @@
                     let phone = $('#phone').val();
                     let message = $('#message').val();
                     $.ajax({
-                        url:"http://localhost/testproject/forms/contact.php",
+                        url:"https://esayog.com/test/sendMail/PHPMailer/mymail.php",
                         type:"POST",
-                        data:JSON.stringify({name:name,email:email,phone:phone,message:message}),
+                        data:{name:name,email:email,phone:phone,message:message},
                         beforeSend:function(){
                             $(".loading").fadeIn();
                         },
                         success:function(data){
                             $(".loading").hide();
                             console.log(data);
-                            if(data == 'true'){
+                            if(data == 'success'){
                                 $(".sent-message").show();
                                 $("#commentForm")[0].reset();
                                 setTimeout(function(){
