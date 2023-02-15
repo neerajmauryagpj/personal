@@ -9,7 +9,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg.jpg") top right no-repeat;
+  background: #040404 url("../img/bg.png") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -237,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin:0;
 	display:flex;
 	justify-content:space-between;
-	align-item:center;
+	align-items:center;
 }
 .mobile-nav ul li{
 	margin-right:5px;
@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding:0;
 	display:inline-block;
 	color:#fff;
-    font-size: 8px;
+  	font-size: 10px;
 	text-align:center;
 	text-transform:uppercase;
 	letter-spacing:0.5px;
@@ -262,6 +262,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mobile-nav ul li a.active{
 	color:#18d26e;
+}
+.contact-from .error:not(label.error) {
+  border: 1px solid #ed3c0d !important;
+}
+.contact-from label.error{
+  display: none !important;
+}
+/* Chrome, Safari, Edge, Opera */
+.contact-from input::-webkit-outer-spin-button,
+.contact-from input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.contact-from input[type=number] {
+  -moz-appearance: textfield;
 }
 @media(min-width:575px){
 	.mobile-nav{
@@ -342,7 +358,7 @@ section.section-show {
   padding-bottom: 45px;
 }
 section .container {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.6);
   padding: 30px;
 }
 @media (max-width: 768px) {
@@ -945,11 +961,11 @@ section .container {
 .contact .info-box .social-links a:hover {
   color: #18d26e;
 }
-.contact .php-email-form {
+.contact .contact-from {
   padding: 30px;
   background: rgba(255, 255, 255, 0.08);
 }
-.contact .php-email-form .error-message {
+.contact .contact-from .error-message {
   display: none;
   background: rgba(255, 255, 255, 0.08);
   background: #ed3c0d;
@@ -957,10 +973,10 @@ section .container {
   padding: 15px;
   font-weight: 600;
 }
-.contact .php-email-form .error-message br + br {
+.contact .contact-from .error-message br + br {
   margin-top: 25px;
 }
-.contact .php-email-form .sent-message {
+.contact .contact-from .sent-message {
   display: none;
   background: rgba(255, 255, 255, 0.08);
   background: #18d26e;
@@ -968,13 +984,13 @@ section .container {
   padding: 15px;
   font-weight: 600;
 }
-.contact .php-email-form .loading {
+.contact .contact-from .loading {
   display: none;
   background: rgba(255, 255, 255, 0.08);
   text-align: center;
   padding: 15px;
 }
-.contact .php-email-form .loading:before {
+.contact .contact-from .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -986,7 +1002,7 @@ section .container {
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .contact-from input, .contact .contact-from textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -995,24 +1011,24 @@ section .container {
   transition: 0.3s;
   color: #fff;
 }
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+.contact .contact-from input:focus, .contact .contact-from textarea:focus {
   background-color: rgba(255, 255, 255, 0.11);
 }
-.contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
+.contact .contact-from input::-moz-placeholder, .contact .contact-from textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.3);
   opacity: 1;
 }
-.contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
+.contact .contact-from input::placeholder, .contact .contact-from textarea::placeholder {
   color: rgba(255, 255, 255, 0.3);
   opacity: 1;
 }
-.contact .php-email-form input {
+.contact .contact-from input {
   padding: 10px 15px;
 }
-.contact .php-email-form textarea {
+.contact .contact-from textarea {
   padding: 12px 15px;
 }
-.contact .php-email-form button[type=submit] {
+.contact .contact-from button[type=submit] {
   background: #18d26e;
   border: 0;
   padding: 10px 30px;
@@ -1020,7 +1036,7 @@ section .container {
   transition: 0.4s;
   border-radius: 4px;
 }
-.contact .php-email-form button[type=submit]:hover {
+.contact .contact-from button[type=submit]:hover {
   background: #15bb62;
 }
 @-webkit-keyframes animate-loading {
